@@ -16,6 +16,7 @@ public class InputActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_input);
 
+		//key listener for input edittext, transitions to OutputActivity
 		final EditText input = (EditText) findViewById(R.id.inputActivity_input);
 		input.setOnKeyListener(new OnKeyListener() {
 
@@ -25,6 +26,7 @@ public class InputActivity extends Activity {
 				if (keyCode == KeyEvent.KEYCODE_ENTER) {
 
 					Intent intent = new Intent(getBaseContext(), OutputActivity.class);
+					//TODO: add way to save text in edittext AND input sanitization
 					startActivity(intent);
 
 					return true;
