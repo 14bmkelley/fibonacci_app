@@ -1,0 +1,6 @@
+<resources>
+	<string name="app_name">Fibonacci</string>
+	<string name="inputActivity.title.text">Fibonaccify!</string>
+	<string name="inputActivity.description.text">Welcome to the app that puts the fibonacci numbers (at least some of them) right at the tip of your fingers.</string>
+	<string name="inputActivity.input.hint">Enter an integer between 0 and 99</string>
+</resources>
