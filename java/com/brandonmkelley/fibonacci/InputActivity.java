@@ -1,12 +1,14 @@
 package com.brandonmkelley.fibonacci;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnKeyListener;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class InputActivity extends Activity {
 
@@ -33,11 +35,24 @@ public class InputActivity extends Activity {
 					EditText input = (EditText) findViewById(R.id.inputActivity_input);
 					String number = input.getText().toString();
 
-					intent.putExtra(NUMBER, number);
+					int num = Integer.parseInt(number);
+					if (num > 99) {
 
-					startActivity(intent);
-					finish();
-					return true;
+						Context context = getApplicationContext();
+						String message = "That number is too large!";
+						int duration = Toast.LENGTH_SHORT;
+						Toast toast = Toast.makeText(context, message, duration);
+						toast.show();
+						return false;
+
+					} else {
+
+						intent.putExtra(NUMBER, number);
+
+						startActivity(intent);
+						finish();
+						return true;
+					}
 
 				}
 
