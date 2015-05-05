@@ -27,7 +27,7 @@
 			android:layout_alignParentTop="true"
 			android:layout_centerHorizontal="true"
 			android:textSize="@dimen/inputActivity.title.size"
-			android:textColor="#ff3b6931"/>
+			android:textColor="#ffffffff"/>
 
 		<Space
 			android:id="@+id/inputActivity.space.title.description"

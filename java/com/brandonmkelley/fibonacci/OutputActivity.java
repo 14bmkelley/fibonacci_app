@@ -43,6 +43,15 @@ public class OutputActivity extends Activity {
 
 	}
 
+	@Override
+	public void onBackPressed() {
+
+		Intent intent = new Intent(getBaseContext(), InputActivity.class);
+		startActivity(intent);
+		finish();
+
+	}
+
 	private BigInteger fibonacci(int n) {
 
 		if (n > 2) {

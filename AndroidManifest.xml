@@ -18,11 +18,7 @@
         </activity>
         <activity
             android:name=".OutputActivity"
-            android:label="@string/title_activity_output"
-            android:parentActivityName=".InputActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.brandonmkelley.fibonacci.InputActivity" />
+            android:label="@string/title_activity_output">
         </activity>
     </application>
 

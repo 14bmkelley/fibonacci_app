@@ -36,6 +36,7 @@ public class InputActivity extends Activity {
 					intent.putExtra(NUMBER, number);
 
 					startActivity(intent);
+					finish();
 					return true;
 
 				}
