@@ -10,6 +10,8 @@ import android.widget.EditText;
 
 public class InputActivity extends Activity {
 
+	private static final String NUMBER = "com.brandonmkelley.fibonacci.NUMBER";
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
@@ -26,9 +28,12 @@ public class InputActivity extends Activity {
 				if (keyCode == KeyEvent.KEYCODE_ENTER) {
 
 					Intent intent = new Intent(getBaseContext(), OutputActivity.class);
-					//TODO: add way to save text in edittext AND input sanitization
-					startActivity(intent);
 
+					//store number of fibonacci numbers requested
+					String number = input.getText().toString();
+					intent.putExtra(NUMBER, number);
+
+					startActivity(intent);
 					return true;
 
 				}
@@ -38,6 +43,12 @@ public class InputActivity extends Activity {
 			}
 
 		});
+
+	}
+
+	public static String getNumber() {
+
+		return NUMBER;
 
 	}
 
