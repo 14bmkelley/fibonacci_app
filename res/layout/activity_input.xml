@@ -9,14 +9,54 @@
 	android:paddingBottom="@dimen/activity_vertical_margin"
 	tools:context=".InputActivity">
 
-	<TextView
-		android:layout_width="wrap_content"
+	<RelativeLayout
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="@string/inputActivity.title.text"/>
+		android:paddingLeft="@dimen/activity_horizontal_margin"
+		android:paddingRight="@dimen/activity_horizontal_margin"
+		android:paddingTop="@dimen/activity_vertical_margin"
+		android:paddingBottom="@dimen/activity_vertical_margin"
+		android:layout_centerVertical="true">
 
-	<EditText
-		android:hint="@string/inputActivity.input.hint"
-		android:layout_width="@dimen/inputActivity.input.width"
-		android:layout_height="wrap_content" />
+		<TextView
+			android:id="@+id/inputActivity.title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/inputActivity.title.text"
+			android:layout_alignParentTop="true"
+			android:layout_centerHorizontal="true"
+			android:textSize="@dimen/inputActivity.title.size"/>
+
+		<Space
+			android:id="@+id/inputActivity.space.title-description"
+			android:layout_width="0dp"
+			android:layout_height="30dp"
+			android:layout_below="@id/inputActivity.title"/>
+
+		<TextView
+			android:id="@+id/inputActivity.description"
+			android:layout_below="@id/inputActivity.space.title-description"
+			android:layout_width="250dp"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:gravity="center"
+			android:text="@string/inputActivity.description.text"/>
+
+		<Space
+			android:id="@+id/inputActivity.space.description-input"
+			android:layout_below="@id/inputActivity.description"
+			android:layout_width="0dp"
+			android:layout_height="50dp"/>
+
+		<EditText
+			android:id="@+id/inputActivity.input"
+			android:layout_below="@id/inputActivity.space.description-input"
+			android:hint="@string/inputActivity.input.hint"
+			android:layout_width="@dimen/inputActivity.input.width"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:gravity="center"/>
+
+	</RelativeLayout>
 
 </RelativeLayout>
