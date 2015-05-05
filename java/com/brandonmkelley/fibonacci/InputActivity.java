@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnKeyListener;
@@ -42,6 +43,7 @@ public class InputActivity extends Activity {
 						String message = "That number is too large!";
 						int duration = Toast.LENGTH_SHORT;
 						Toast toast = Toast.makeText(context, message, duration);
+						toast.setGravity(Gravity.TOP, 0, 50);
 						toast.show();
 						return false;
 
