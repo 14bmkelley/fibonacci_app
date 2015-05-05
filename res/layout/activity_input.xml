@@ -55,6 +55,7 @@
 			android:id="@+id/inputActivity.input"
 			android:layout_below="@id/inputActivity.space.description.input"
 			android:hint="@string/inputActivity.input.hint"
+			android:inputType="number"
 			android:layout_width="@dimen/inputActivity.input.width"
 			android:layout_height="wrap_content"
 			android:layout_centerHorizontal="true"
